@@ -1,4 +1,5 @@
 import { Text, View } from "react-native";
+import Input from "../components/Input";
 
 export default function Login () {
   return (
@@ -10,6 +11,7 @@ export default function Login () {
       }}
     >
       <Text>Login</Text>
+      <Input autoComplete="email"></Input>
     </View>
   );
 }
