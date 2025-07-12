@@ -12,7 +12,7 @@ const Input = ({ autoComplete, label, accessibilityLabel }: InputProps) => {
 
   return (
   <View>
-    <Text>{label}</Text>
+    <Text style={styles.label}>{label}</Text>
     <TextInput
       style={styles.input}
       onChangeText={onChangeText}
@@ -31,6 +31,10 @@ const Input = ({ autoComplete, label, accessibilityLabel }: InputProps) => {
       borderWidth: 2,
       borderStyle: "solid",
       borderColor: "grey",
+    },
+    label: {
+      marginTop: 8,
+      marginBottom: 8,
     }
   });
 
