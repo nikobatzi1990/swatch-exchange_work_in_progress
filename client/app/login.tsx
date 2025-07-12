@@ -11,7 +11,11 @@ export default function Login () {
       }}
     >
       <Text>Login</Text>
-      <Input autoComplete="email"></Input>
+      <Input 
+        autoComplete="email" 
+        label="Email Address" 
+        accessibilityLabel="email address input">  
+      </Input>
     </View>
   );
 }
