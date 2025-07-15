@@ -5,9 +5,10 @@ interface InputProps {
   autoComplete: 'email' | 'username' | 'password' | 'off';
   label: string;
   accessibilityLabel: string;
+  secureTextEntry?: boolean
 }
 
-const Input = ({ autoComplete, label, accessibilityLabel }: InputProps) => {
+const Input = ({ autoComplete, label, accessibilityLabel, secureTextEntry }: InputProps) => {
   const [text, onChangeText] = React.useState('');
 
   return (
@@ -19,6 +20,7 @@ const Input = ({ autoComplete, label, accessibilityLabel }: InputProps) => {
       value={text}
       autoComplete={autoComplete ?? 'off'}
       accessibilityLabel={accessibilityLabel}
+      secureTextEntry={secureTextEntry}
     />
   </View>
   );

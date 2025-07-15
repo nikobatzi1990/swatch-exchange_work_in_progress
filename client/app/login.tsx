@@ -16,6 +16,14 @@ export default function Login () {
         label="Email Address" 
         accessibilityLabel="email address input">  
       </Input>
+
+      <Input 
+        autoComplete="password" 
+        label="Password" 
+        accessibilityLabel="password input"
+        secureTextEntry={true}>  
+      </Input>
+      
     </View>
   );
 }

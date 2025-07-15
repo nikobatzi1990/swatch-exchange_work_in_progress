@@ -1,4 +1,5 @@
 import { Text, View } from "react-native";
+import Input from "../components/Input";
 
 export default function Signup () {
   return (
@@ -10,6 +11,18 @@ export default function Signup () {
       }}
     >
       <Text>Signup</Text>
+      <Input 
+        autoComplete="email" 
+        label="Email Address" 
+        accessibilityLabel="email address input">  
+      </Input>
+
+      <Input 
+        autoComplete="password" 
+        label="Password" 
+        accessibilityLabel="password input"
+        secureTextEntry={true}>  
+      </Input>
     </View>
   );
 }
