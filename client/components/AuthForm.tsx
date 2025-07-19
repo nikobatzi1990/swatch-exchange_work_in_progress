@@ -13,7 +13,12 @@ const AuthForm = () => {
     control, 
     handleSubmit, 
     formState: { errors }
-  } = useForm<AuthFormData>();
+  } = useForm<AuthFormData>({
+    defaultValues: {
+      email: "",
+      password: ""
+    }
+});
 
   const onSubmit = (data: any) => console.log(data);
 
@@ -27,7 +32,7 @@ const AuthForm = () => {
             autoComplete="email" 
             label="Email Address" 
             accessibilityLabel="email address input" 
-            value={value || ""}
+            value={value}
             onChangeText={onChange}
           />  
         )}
@@ -44,7 +49,7 @@ const AuthForm = () => {
             label="Password" 
             accessibilityLabel="password input"
             secureTextEntry={true}
-            value={value || ""}
+            value={value}
             onChangeText={onChange}
           />  
         )}
