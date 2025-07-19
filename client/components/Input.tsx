@@ -34,6 +34,7 @@ const Input = ({ value, onChangeText, autoComplete, label, accessibilityLabel, s
       borderWidth: 2,
       borderStyle: "solid",
       borderColor: "grey",
+      marginBottom: 10,
     },
     label: {
       marginTop: 8,

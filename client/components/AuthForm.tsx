@@ -57,7 +57,11 @@ const AuthForm = () => {
       />
       {errors.password && <Text>This field is required.</Text>}
 
-      <Button title="Submit" onPress={handleSubmit(onSubmit)} />
+      <Button 
+        title="Submit" 
+        onPress={handleSubmit(onSubmit)}
+        accessibilityLabel="submit button" 
+      />
   </View>
   );
 }
