@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Button, Text } from 'react-native';
+import { View, Button, Text, StyleSheet } from 'react-native';
 import { useForm, Controller } from 'react-hook-form';
 import Input from './Input';
 
@@ -38,7 +38,7 @@ const AuthForm = () => {
         )}
         name="email"
       />
-      {errors.email && <Text>This field is required.</Text>}
+      {errors.email && <Text style={styles.error}>This field is required.</Text>}
 
       <Controller
         control={control} 
@@ -55,15 +55,28 @@ const AuthForm = () => {
         )}
         name="password"
       />
-      {errors.password && <Text>This field is required.</Text>}
-
+      {errors.password && <Text style={styles.error}>This field is required.</Text>}
+    <View style={styles.button}>
       <Button 
         title="Submit" 
         onPress={handleSubmit(onSubmit)}
         accessibilityLabel="submit button" 
       />
+    </View>
   </View>
   );
 }
+
+const styles = StyleSheet.create({
+  button: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignSelf: "center"
+  },
+  error: {
+    color: "red",
+    marginBottom: 10,
+  }
+});
 
 export default AuthForm;
