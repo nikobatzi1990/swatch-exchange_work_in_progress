@@ -1,4 +1,4 @@
-import { Text, View } from "react-native";
+import { Text, View, StyleSheet } from "react-native";
 import { Link } from 'expo-router';
 import AuthForm from "../components/AuthForm";
 
@@ -11,10 +11,20 @@ export default function Login () {
         alignItems: "center",
       }}
     >
-      <Text>Login</Text>
       <AuthForm />
-      <Text>Don&apos;t have an account yet?</Text>
-      <Link href="/signup" >Sign Up!</Link>
+      <Text style={styles.subtext}>Don&apos;t have an account yet?</Text>
+      <Link style={styles.link} href="/signup" >Sign Up!</Link>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  subtext: {
+    marginTop: 10,
+  },
+  link: {
+    marginTop: 5,
+    color: "blue",
+    textDecorationLine: "underline"
+  }
+});
