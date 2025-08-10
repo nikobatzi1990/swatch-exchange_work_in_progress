@@ -13,7 +13,7 @@ export default function Signup () {
     >
       <AuthForm />
       <Text style={styles.subtext}>Already have an account?</Text>
-      <Link href="/login">Log In!</Link>
+      <Link style={styles.link} href="/login">Log In!</Link>
     </View>
   );
 }
@@ -21,5 +21,10 @@ export default function Signup () {
 const styles = StyleSheet.create({
   subtext: {
     marginTop: 10,
+  },
+  link: {
+    marginTop: 5,
+    color: "blue",
+    textDecorationLine: "underline"
   }
 });
