@@ -1,4 +1,5 @@
 import { Text, View } from "react-native";
+import Dropdown from "@/components/Dropdown";
 
 export default function AddSwatch() {
   return (
@@ -9,7 +10,7 @@ export default function AddSwatch() {
         alignItems: "center",
       }}
     >
-      <Text>Add a new swatch</Text>
+      <Dropdown />
     </View>
   );
 }
