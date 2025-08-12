@@ -1,5 +1,7 @@
 export const brands = [
-// {label: "", value: ""},
+// {label: "", value: "" products: {
+//  watercolor: {
+// }}},
   {label: "Caran D'Ache", value: "caran d'ache"},
   {label: "Daniel Smith", value: "daniel smith"},
   {label: "Da Vinci", value: "da vinci"},
