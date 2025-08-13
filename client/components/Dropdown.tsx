@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import { View } from 'react-native';
 import DropDownPicker from 'react-native-dropdown-picker';
-import { brands } from '@/constants/brands';
 
-export default function Dropdown() {
+interface DropdownProps {
+  items: { label: string; value: string; }[];
+  placeholder: string;
+}
+
+export default function Dropdown({ items, placeholder }: DropdownProps) {
    const [open, setOpen] = useState(false);
     const [value, setValue] = useState(null);
-    const [items, setItems] = useState(brands);
 
     return (
       <View>
@@ -23,8 +26,7 @@ export default function Dropdown() {
               items={items}
               setOpen={setOpen}
               setValue={setValue}
-              setItems={setItems}
-              placeholder={"Select a pigment brand"}
+              placeholder={placeholder}
           />
         </View>
         {/* <Text>Selected Brand: {value === null ? 'none' : value}</Text> */}
