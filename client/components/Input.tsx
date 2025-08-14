@@ -7,7 +7,7 @@ interface InputProps {
   accessibilityLabel: string;
   secureTextEntry?: boolean;
   value: string;
-  onChangeText: (text: string) => void
+  onChangeText: (text: string) => void;
 }
 
 const Input = ({ value, onChangeText, autoComplete, label, accessibilityLabel, secureTextEntry }: InputProps) => {

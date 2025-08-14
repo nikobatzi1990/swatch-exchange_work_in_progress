@@ -8,7 +8,7 @@ interface AuthFormData {
   password: string,
 };
 
-const AuthForm = () => {
+export default function AuthForm() {
   const { 
     control, 
     handleSubmit, 
@@ -78,5 +78,3 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   }
 });
-
-export default AuthForm;
