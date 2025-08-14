@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Text, View } from "react-native";
 import Dropdown from "@/components/Dropdown";
+import ImageInput from '@/components/ImageInput';
 import { brands } from '@/constants/brands';
 
 export default function AddSwatch() {  
@@ -13,6 +14,7 @@ export default function AddSwatch() {
       }}
     >
       <Dropdown items={brands} placeholder={"Select a brand"}/>
+      <ImageInput />
     </View>
   );
 }
